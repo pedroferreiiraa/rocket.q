@@ -20,7 +20,7 @@ html {
   --grey-dark: #4D5E77;
   --grey-blue: #A1B2CD;
   --grey-light: #E5EAF1;
-
+  --grey-medium: #EAECF2;
   /* 1REM = 16px (user agent) = 100% */
   font-size: 62.5%;
   /* 10px*/
