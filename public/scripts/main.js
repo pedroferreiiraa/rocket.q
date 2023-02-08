@@ -25,8 +25,15 @@ deleteButton.forEach(button => {
   function handleClick(event, check = true) {
     // Previnindo padrão do form
     event.preventDefault();
-    // Pegando o formulário para persistir os dados
 
+    const slug = check ? "check" : "delete"
+    //Pegando o id da room
+    const roomId = document.querySelector('#room-id').dataset.id
+    const questionId = event.target.dataset.id
+
+    // Pegando o formulário para persistir os dados
+    const form = document.querySelector('.modal form')
+    form.setAttribute('action', `/question/${roomId}/${questionId}/${slug}`)
 
 
 
