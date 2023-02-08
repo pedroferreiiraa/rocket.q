@@ -11,10 +11,7 @@ const checkButtons = document.querySelectorAll(".actions a.check")
 
 checkButtons.forEach(button => {
 // adicionar a escuta de click nos botoes
-  button.addEventListener('click', event => {
-    // Abrir o modal
-    modal.open()
-  })
+  button.addEventListener('click', handleClick)
 }) 
 
 
@@ -22,7 +19,26 @@ checkButtons.forEach(button => {
 const deleteButton = document.querySelectorAll('.actions a.delete')
 
 deleteButton.forEach(button => {
-  button.addEventListener('click', event => {
-    modal.open()
-  })
+  button.addEventListener("click", (event) => handleClick(event, false))
 })
+
+  function handleClick(event, check = true) {
+    // Previnindo padrão do form
+    event.preventDefault();
+    // Pegando o formulário para persistir os dados
+
+
+
+
+
+
+
+
+    modalTitle.innerHTML = check ? "Marcar como lida" : "Excluir essa pergunta"
+    modalDescription.innerHTML = check ? "Deseja marcar como lida?" : "Tem certeza que deseja excluir essa pergunta?"
+    modalButton.innerHTML = check ? "Marcar como lida" : "Excluir pergunta"
+    check ? modalButton.classList.remove("red") : modalButton.classList.add("red")
+
+    // Abrir modal
+    modal.open()
+  }
