@@ -153,3 +153,31 @@
 .question-wrapper.read .question-content .user {
   background: var(--grey-blue);
 }
+
+/* Sobre a no-questions */
+.no-questions {
+  display: block;
+  text-align: center;
+  margin-top: 5.2rem;
+}
+
+.no-questions img {
+  max-width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+.no-questions p {
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.no-questions p+p {
+  margin-top: 1.3rem;
+  font-family: 'Opens-sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--grey-dark);
+  line-height: 1.9rem;
+}
